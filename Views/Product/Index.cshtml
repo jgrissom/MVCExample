@@ -1,7 +1,11 @@
+@model IEnumerable<Product>
+
 <h1>Products Page</h1>
 <p>Browse our products below:</p>
 <hr>
 <ul>
-  <li>Kite String</li>
-  <li>Bag of Marbles</li>
+  @foreach(Product p in Model)
+  {
+    <li>@p.Name</li>
+  }
 </ul>
