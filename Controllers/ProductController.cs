@@ -8,4 +8,5 @@ public class ProductController : Controller
     new Product(){ Id = 3, Name="Silly Putty", Price = 3.99 }
   };
   public IActionResult Index() => View(Products);
+  public IActionResult Details(int id) => View(Products.FirstOrDefault(p => p.Id == id));
 }
