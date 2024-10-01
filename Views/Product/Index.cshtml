@@ -6,6 +6,6 @@
 <ul>
   @foreach(Product p in Model)
   {
-    <li>@p.Name</li>
+    <li><a asp-controller="Product" asp-action="Details" asp-route-id="@p.Id">@p.Name</a></li>
   }
 </ul>
